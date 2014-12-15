@@ -44,6 +44,6 @@ func markHandler(rw http.ResponseWriter, req *http.Request) {
 }
 
 func serveErr(rw http.ResponseWriter, req *http.Request, err error) {
-	rw.WriteHeader(505)
+	rw.WriteHeader(500)
 	rw.Write([]byte(fmt.Sprint("Internal Server Error", err)))
 }
